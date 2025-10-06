@@ -89,15 +89,33 @@
       white-space: pre-wrap;
       overflow-y: auto;
     }
+
+    footer {
+      background: #f0f0f0;
+      padding: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    footer code {
+      background: #e0e0e0;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>HTML Cleaner per Amazon</h1>
     <p>
-      Questo strumento è ideale per chi crea contenuti su <strong>Amazon</strong> (come schede prodotto o A+ Content).  
-      Pulisce automaticamente il codice HTML, rimuovendo tutti i tag e gli attributi non consentiti da Amazon,  
-      mantenendo solo quelli essenziali come &lt;p&gt;, &lt;br&gt;, &lt;strong&gt;, &lt;em&gt; ecc.
+      Questo strumento è ideale per chi crea contenuti su <strong>Amazon</strong> (schede prodotto, A+ Content, ecc.).  
+      Rimuove automaticamente tutti i tag e gli attributi HTML non consentiti da Amazon,  
+      mantenendo solo quelli essenziali come &lt;p&gt;, &lt;br&gt;, &lt;strong&gt;, &lt;em&gt;, ecc.
     </p>
   </header>
 
@@ -120,9 +138,34 @@
     </div>
   </main>
 
+  <footer>
+    <h2>Tag HTML consentiti</h2>
+    <p>
+      Questo pulitore mantiene solo i seguenti tag HTML, compatibili con le linee guida di Amazon:
+    </p>
+    <ul>
+      <li><code>&lt;p&gt;</code> – Paragrafo</li>
+      <li><code>&lt;br&gt;</code> – Interruzione di riga</li>
+      <li><code>&lt;b&gt;</code> – Testo in grassetto</li>
+      <li><code>&lt;i&gt;</code> – Testo in corsivo</li>
+      <li><code>&lt;strong&gt;</code> – Enfasi (grassetto)</li>
+      <li><code>&lt;em&gt;</code> – Enfasi (corsivo)</li>
+      <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> – Liste puntate o numerate</li>
+    </ul>
+
+    <h2>Come funziona</h2>
+    <p>
+      Il codice utilizza un parser HTML interno del browser (<code>DOMParser</code>) per leggere il contenuto incollato.  
+      Ogni elemento viene analizzato e confrontato con una lista di tag permessi.  
+      Se un tag non è nella lista, viene rimosso ma il suo contenuto interno viene mantenuto.  
+      Tutti gli attributi (come <code>style</code>, <code>class</code>, <code>id</code>, ecc.) vengono eliminati per sicurezza.  
+      In questo modo ottieni un HTML “pulito” e compatibile con i sistemi di Amazon.
+    </p>
+  </footer>
+
   <script>
     function cleanHTML() {
-      const allowedTags = ['p', 'br', 'b', 'i', 'strong', 'em', 'ul', 'ol', 'li']; // Tag tipici consentiti da Amazon
+      const allowedTags = ['p', 'br', 'b', 'i', 'strong', 'em', 'ul', 'ol', 'li']; // Tag consentiti su Amazon
       const input = document.getElementById('input').value;
 
       const parser = new DOMParser();
