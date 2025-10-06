@@ -23,6 +23,7 @@
       color: white;
       padding: 1rem;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
@@ -35,6 +36,22 @@
       font-size: 0.95rem;
       opacity: 0.95;
       line-height: 1.4;
+    }
+
+    /* 🔹 Link GitHub in alto a destra */
+    .github-link {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #ff9900;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .github-link:hover {
+      color: #ffd580;
+      text-decoration: underline;
     }
 
     main {
@@ -107,6 +124,9 @@
 </head>
 <body>
   <header>
+    <a class="github-link" href="https://github.com/zGolden31/AmazonStripHTML" target="_blank" rel="noopener noreferrer">
+      🌐 GitHub
+    </a>
     <h1>HTML Cleaner per Amazon</h1>
     <p>
       Questo strumento è ideale per chi crea contenuti su <strong>Amazon</strong> (schede prodotto, A+ Content, ecc.).  
