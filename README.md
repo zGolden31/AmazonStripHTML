@@ -28,13 +28,3 @@ Il codice usa il parser HTML del browser (`DOMParser`) per leggere il contenuto 
 - Tutti gli attributi HTML vengono eliminati.  
 
 Il risultato è un **HTML sicuro e compatibile con Amazon**, pronto da incollare nell’editor del prodotto.
-
----
-
-## 🧩 Installazione e utilizzo locale
-
-Puoi usare il progetto anche offline, senza bisogno di server.
-
-1. Scarica o clona il repository:
-   ```bash
-   git clone https://github.com/tuo-username/html-cleaner-amazon.git
