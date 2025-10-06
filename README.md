@@ -2,7 +2,7 @@
 
 **HTML Cleaner per Amazon** è uno strumento gratuito che pulisce automaticamente il codice HTML, rimuovendo tutti i tag e gli attributi non consentiti da **Amazon** (ad esempio per descrizioni prodotto o contenuti A+).
 
-👉 [Provalo online su GitHub Pages](https://tuo-username.github.io/html-cleaner-amazon/](https://zgolden31.github.io/AmazonStripHTML/))  
+👉 [Provalo online su GitHub Pages](https://zgolden31.github.io/AmazonStripHTML/)  
 
 ---
 
