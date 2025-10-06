@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Cleaner</title>
+  <title>HTML Cleaner per Amazon</title>
   <style>
     body {
       font-family: sans-serif;
@@ -14,7 +14,7 @@
     }
 
     header {
-      background: #0078ff;
+      background: #232f3e;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -22,13 +22,14 @@
 
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     header p {
       margin: 0.5rem 0 0;
       font-size: 0.95rem;
-      opacity: 0.9;
+      opacity: 0.95;
+      line-height: 1.4;
     }
 
     main {
@@ -92,8 +93,12 @@
 </head>
 <body>
   <header>
-    <h1>HTML Cleaner</h1>
-    <p>Questo strumento rimuove automaticamente tutti i tag e gli attributi HTML non consentiti, mantenendo solo quelli essenziali (come &lt;p&gt;, &lt;br&gt;, &lt;strong&gt;, ecc.).</p>
+    <h1>HTML Cleaner per Amazon</h1>
+    <p>
+      Questo strumento è ideale per chi crea contenuti su <strong>Amazon</strong> (come schede prodotto o A+ Content).  
+      Pulisce automaticamente il codice HTML, rimuovendo tutti i tag e gli attributi non consentiti da Amazon,  
+      mantenendo solo quelli essenziali come &lt;p&gt;, &lt;br&gt;, &lt;strong&gt;, &lt;em&gt; ecc.
+    </p>
   </header>
 
   <main>
@@ -117,7 +122,7 @@
 
   <script>
     function cleanHTML() {
-      const allowedTags = ['p', 'br', 'b', 'i', 'strong', 'em', 'ul', 'ol', 'li', 'a']; // <-- puoi modificare qui
+      const allowedTags = ['p', 'br', 'b', 'i', 'strong', 'em', 'ul', 'ol', 'li']; // Tag tipici consentiti da Amazon
       const input = document.getElementById('input').value;
 
       const parser = new DOMParser();
